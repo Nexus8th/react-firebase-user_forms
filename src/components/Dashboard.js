@@ -33,7 +33,7 @@ export default function Dashboard() {
         <>
             <Card>
                 <Card.Body>
-                    <h2 className="text-center mb-4">Profile</h2>
+                    <h2 className="text-center mb-4">Profil</h2>
                     {error && <Alert variant="danger">{error}</Alert>}
                     <div className="w-100 text-center mt-2">
                         <strong>Email: &nbsp;</strong>{currentUser.email}
@@ -42,7 +42,7 @@ export default function Dashboard() {
                         <strong>Pseudo: &nbsp;</strong>{currentUser.pseudo}
                     </div>
                     <div className="w-100 text-center mt-2">
-                        <Link to="/update-profile" className="btn btn-primary mt-3">Modifier le profile</Link>
+                        <Link to="/update-profile" className="btn btn-primary mt-3">Modifier le profil</Link>
                     </div>
                     <div className="w-100 text-center mt-2">
                         <Button variant="primary" onClick={handleLogout}>Se déconnecter</Button>

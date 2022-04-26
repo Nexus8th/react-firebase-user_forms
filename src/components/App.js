@@ -27,7 +27,7 @@ function App() {
             </AuthProvider>
           </Router>
     </Container>,
-    <Container>
+    <Container className="w-100 m-0 p-0" style={{ maxWidth:'100%', minHeight:'auto'}}>
       <Router>
         <AuthProvider>
             <div>

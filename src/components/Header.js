@@ -1,32 +1,43 @@
-import logo from '../assets/Logo-blanc-H.svg';
-
-
+import { ReactComponent as Logo } from './../images/Logo-blanc-H.svg'
 
 function Header() {
 
-
-
   return (
-    <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-xl navbar-dark bg-dark m-0 p-0 w-100 sticky-top" style={{ maxWidth: '100%'}}>
             <a className="navbar-brand" href="# ">
-                <img alt="logo" src={logo}></img>
+                <Logo style={{ width:'150px', height:'150px'}}/>
             </a>
-            <div className="navbar">
-                <ul className="navbar-nav">
-                    <li className="nav-item active">
-                        <a className="nav-link" href="# ">Accueil</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="# ">Présentation</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link " href="# ">Nos Produits</a>
-                    </li>
-                </ul>
-            </div>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+            </button>
+                <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <div className="navbar">
+                        <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li className="nav-item active">
+                                <a className="nav-link" href="# ">Accueil</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="# ">Présentation</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link " href="# ">Nos prestations</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link " href="# ">Nos Produits</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link " href="# ">Contact</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link disabled" href=" #" tabIndex="-1" aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                        <a className="navbar-icon" href=" #">
+                            <img alt="user-icon" src=""></img>
+                        </a>
+                    </div>
+                </div>
         </nav>
-    </div>
   )
 }
 

@@ -12,33 +12,37 @@ import Home from "./Home";
 
 function App() {
   return (
-    <Container className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
-          <Router>
-            <AuthProvider>
-            <div className="w-100" style={{ maxWidth: "400px" }}>
-              <Routes>
-                  <Route exact path="/dashboard" element={<PrivateRoute><Dashboard/></PrivateRoute>} />
-                  <Route path="/signup" element={<Signup />} />
-                  <Route path="/login" element={<Login />} />
-                  <Route path="/forgot-password" element={<ForgotPassword />} />
-                  <Route path="/update-profile" element={<PrivateRoute><UpdateProfile/></PrivateRoute>} />
-              </Routes>
-            </div>
-            </AuthProvider>
-          </Router>
-    </Container>,
-    <Container className="w-100 m-0 p-0" style={{ maxWidth:'100%', minHeight:'auto'}}>
-      <Router>
-        <AuthProvider>
-            <div>
-              <Routes>
-                <Route path="/home" element={<Home/>} />
-                <Route path="/" element={<Navigate to="/home" />} />
-              </Routes>
-            </div>
-        </AuthProvider>
-      </Router>
-    </Container>
+    <>
+      <Container className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
+            <Router>
+              <AuthProvider>
+              <div className="w-100" style={{ maxWidth: "400px" }}>
+                <Routes>
+                    <Route exact path="/dashboard" element={<PrivateRoute><Dashboard/></PrivateRoute>} />
+                    <Route path="/signup" element={<Signup />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/forgot-password" element={<ForgotPassword />} />
+                    <Route path="/update-profile" element={<PrivateRoute><UpdateProfile/></PrivateRoute>} />
+                </Routes>
+              </div>
+              </AuthProvider>
+            </Router>
+      </Container>
+    </>,
+    <>
+      <Container className="w-100 m-0 p-0" style={{ maxWidth:'100%', minHeight:'auto'}}>
+        <Router>
+          <AuthProvider>
+              <div>
+                <Routes>
+                  <Route path="/home" element={<Home/>} />
+                  <Route path="/" element={<Navigate to="/home" />} />
+                </Routes>
+              </div>
+          </AuthProvider>
+        </Router>
+      </Container>
+    </>
   );
 }
 

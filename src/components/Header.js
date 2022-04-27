@@ -1,4 +1,5 @@
-import { ReactComponent as Logo } from './../images/Logo-blanc-H.svg'
+import { ReactComponent as Logo } from './../images/Logo-blanc-H.svg';
+import { ReactComponent as UserIcon } from './../images/person-circle.svg'
 
 function Header() {
 
@@ -11,8 +12,8 @@ function Header() {
             <span className="navbar-toggler-icon"></span>
             </button>
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <div className="navbar">
-                        <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <div className="navbar d-flex ms-auto me-5" >
+                        <ul className="navbar-nav mt-2 mt-lg-0">
                             <li className="nav-item active">
                                 <a className="nav-link" href="# ">Accueil</a>
                             </li>
@@ -33,7 +34,7 @@ function Header() {
                             </li>
                         </ul>
                         <a className="navbar-icon" href=" #">
-                            <img alt="user-icon" src=""></img>
+                            <UserIcon style={{color:'white', width:'20px'}}/>
                         </a>
                     </div>
                 </div>

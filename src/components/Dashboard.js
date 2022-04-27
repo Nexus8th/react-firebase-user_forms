@@ -31,26 +31,28 @@ export default function Dashboard() {
     
     return (
         <>
-            <Card>
-                <Card.Body>
-                    <h2 className="text-center mb-4">Profil</h2>
-                    {error && <Alert variant="danger">{error}</Alert>}
-                    <div className="w-100 text-center mt-2">
-                        <strong>Email: &nbsp;</strong>{currentUser.email}
-                    </div>
-                    <div className="w-100 text-center mt-2">
-                        <strong>Pseudo: &nbsp;</strong>{currentUser.pseudo}
-                    </div>
-                    <div className="w-100 text-center mt-2">
-                        <Link to="/update-profile" className="btn btn-primary mt-3">Modifier le profil</Link>
-                    </div>
-                    <div className="w-100 text-center mt-2">
-                        <Button variant="primary" onClick={handleLogout}>Se déconnecter</Button>
-                    </div>
-                    <div className="w-100 text-center mt-2">
-                        <Button variant="danger" onClick={handleDelete}>Supprimer le compte</Button>
-                    </div>
-                </Card.Body>  
+            <Card className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
+                <div className="w-100" style={{ maxWidth: "400px" }}>
+                    <Card.Body>
+                        <h2 className="text-center mb-4">Profil</h2>
+                        {error && <Alert variant="danger">{error}</Alert>}
+                        <div className="w-100 text-center mt-2">
+                            <strong>Email: &nbsp;</strong>{currentUser.email}
+                        </div>
+                        <div className="w-100 text-center mt-2">
+                            <strong>Pseudo: &nbsp;</strong>{currentUser.pseudo}
+                        </div>
+                        <div className="w-100 text-center mt-2">
+                            <Link to="/update-profile" className="btn btn-primary mt-3">Modifier le profil</Link>
+                        </div>
+                        <div className="w-100 text-center mt-2">
+                            <Button variant="primary" onClick={handleLogout}>Se déconnecter</Button>
+                        </div>
+                        <div className="w-100 text-center mt-2">
+                            <Button variant="danger" onClick={handleDelete}>Supprimer le compte</Button>
+                        </div>
+                    </Card.Body>  
+                </div>
             </Card>
         </>
     );

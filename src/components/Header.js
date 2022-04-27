@@ -4,30 +4,31 @@ import { ReactComponent as UserIcon } from './../images/person-circle.svg'
 function Header() {
 
   return (
-        <nav className="navbar navbar-expand-xl navbar-dark m-0 p-0 w-100 sticky-top" style={{ maxWidth: '100%', backgroundColor:'#00675B', minHeight:'100px'}}>
+      <div className="w-100 m-0 p-0" style={{ maxWidth:'100%', minHeight:'auto'}}>
+        <nav className="navbar navbar-expand-xl sticky-top navbar-dark " style={{ minWidth: '100%', backgroundColor:'#00675B', minHeight:'100px', maxWidth:'100%'}}>
             <a className="navbar-brand" href="# ">
                 <Logo style={{maxWidth:'270px', maxHeight:'80px', marginLeft:'90px'}}/>
             </a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
             </button>
-                <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <div className="navbar d-flex ms-auto me-5" >
+                <div className="collapse navbar-collapse">
+                    <div className="navbar d-flex ms-auto me-5">
                         <ul className="navbar-nav mt-2 mt-lg-0">
                             <li className="nav-item active">
-                                <a className="nav-link" href="# ">Accueil</a>
+                                <a className="nav-link text-white" href="# ">Accueil</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="# ">Présentation</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link " href="# ">Nos prestations</a>
+                                <a className="nav-link" href="# ">Nos prestations</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link " href="# ">Nos Produits</a>
+                                <a className="nav-link" href="# ">Nos Produits</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link " href="# ">Contact</a>
+                                <a className="nav-link" href="# ">Contact</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link disabled" href=" #" tabIndex="-1" aria-disabled="true">x</a>
@@ -39,6 +40,7 @@ function Header() {
                     </div>
                 </div>
         </nav>
+    </div>
   )
 }
 

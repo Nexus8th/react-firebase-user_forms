@@ -1,6 +1,5 @@
 import { ReactComponent as Logo } from './../images/Logo-blanc-H.svg';
 import { ReactComponent as UserIcon } from './../images/person-circle.svg'
-import ModalAuth from './ModalAuth';
 
 function Header() {
 
@@ -35,9 +34,9 @@ function Header() {
                                     <a className="nav-link disabled" href=" #" tabIndex="-1" aria-disabled="true">x</a>
                                 </li>
                             </ul>
-                            <button onClick={<ModalAuth/>} className="navbar-icon" href=" #">
+                            <a className="navbar-icon" href=" #">
                                 <UserIcon style={{color:'white', width:'20px'}}/>
-                            </button>
+                            </a>
                         </div>
                     </div>
             </nav>

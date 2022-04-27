@@ -31,8 +31,8 @@ export default function Dashboard() {
     
     return (
         <>
-            <Card className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
-                <div className="w-100" style={{ maxWidth: "400px" }}>
+        <div className="d-flex align-items-center justify-content-center w-100">
+            <Card style={{ maxWidth: "400px" }}>
                     <Card.Body>
                         <h2 className="text-center mb-4">Profil</h2>
                         {error && <Alert variant="danger">{error}</Alert>}
@@ -51,9 +51,9 @@ export default function Dashboard() {
                         <div className="w-100 text-center mt-2">
                             <Button variant="danger" onClick={handleDelete}>Supprimer le compte</Button>
                         </div>
-                    </Card.Body>  
-                </div>
+                    </Card.Body>
             </Card>
+        </div>
         </>
     );
 }

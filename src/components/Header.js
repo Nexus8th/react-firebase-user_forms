@@ -19,16 +19,16 @@ function Header() {
                                 <a className="nav-link text-white" href="# ">Accueil</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="# ">Présentation</a>
+                                <a className="nav-link text-white" href="# ">Présentation</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="# ">Nos prestations</a>
+                                <a className="nav-link text-white" href="# ">Nos prestations</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="# ">Nos Produits</a>
+                                <a className="nav-link text-white" href="# ">Nos Produits</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="# ">Contact</a>
+                                <a className="nav-link text-white" href="# ">Contact</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link disabled" href=" #" tabIndex="-1" aria-disabled="true">x</a>

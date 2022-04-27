@@ -19,7 +19,7 @@ const Login = () => {
             setError("");
             setLoading(true);
             await login(emailRef.current.value, passwordRef.current.value)
-            navigate('/')
+            navigate('/dashboard')
         } catch {
             setError('Erreur lors de la connexion');
         }
@@ -28,28 +28,28 @@ const Login = () => {
     }
     return (
         <>
-        <Card className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
-            <div className="w-100" style={{ maxWidth: "400px" }}>
-                <Card.Body>
-                    <h2 className="text-center mb-4">Connexion</h2>
-                    {error && <Alert variant="danger">{error}</Alert>}
-                    <Form onSubmit={handleSubmit}>
-                        <Form.Group id="email">
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control className="mb-3" type="email" placeholder="Entrez votre email" required ref={emailRef}/>
-                        </Form.Group>
-                        <Form.Group id="password">
-                            <Form.Label>Mot de passe</Form.Label>
-                            <Form.Control className="mb-3" type="password" placeholder="Entrez votre mot de passe" required ref={passwordRef}/>
-                        </Form.Group>
-                        <Button disabled={loading} className="w-100" type="submit">Se connecter</Button>
-                        <div className="w-100 text-center mt-3">
-                            <Link to="/forgot-password">Mot de passe oublié?</Link>
-                        </div>
-                    </Form>
-                </Card.Body>
-            </div>
-        </Card>
+        <div className="d-flex align-items-center justify-content-center w-100">
+            <Card style={{ maxWidth: "400px" }}>
+                    <Card.Body>
+                        <h2 className="text-center mb-4">Connexion</h2>
+                        {error && <Alert variant="danger">{error}</Alert>}
+                        <Form onSubmit={handleSubmit}>
+                            <Form.Group id="email">
+                                <Form.Label>Email</Form.Label>
+                                <Form.Control className="mb-3" type="email" placeholder="Entrez votre email" required ref={emailRef}/>
+                            </Form.Group>
+                            <Form.Group id="password">
+                                <Form.Label>Mot de passe</Form.Label>
+                                <Form.Control className="mb-3" type="password" placeholder="Entrez votre mot de passe" required ref={passwordRef}/>
+                            </Form.Group>
+                            <Button disabled={loading} className="w-100" type="submit">Se connecter</Button>
+                            <div className="w-100 text-center mt-3">
+                                <Link to="/forgot-password">Mot de passe oublié?</Link>
+                            </div>
+                        </Form>
+                    </Card.Body>
+            </Card>
+        </div>
         <div className="w-100 text-center mt-2">
             Nouveau membre? <Link to="/signup">S'inscrire</Link>
         </div>

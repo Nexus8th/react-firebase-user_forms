@@ -1,5 +1,5 @@
-import logo from '../assets/Logo-blanc-H.svg';
-
+import logo from '../images/Logo-blanc-H.svg';
+import icon from "../images/user-icon-white.svg";
 
 
 function Header() {
@@ -21,10 +21,19 @@ function Header() {
                         <a className="nav-link" href="# ">Présentation</a>
                     </li>
                     <li className="nav-item">
+                        <a className="nav-link " href="# ">Nos prestations</a>
+                    </li>
+                    <li className="nav-item">
                         <a className="nav-link " href="# ">Nos Produits</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link " href="# ">Contact</a>
                     </li>
                 </ul>
             </div>
+            <a href="# ">
+                <button type='icon' src={icon}></button>
+            </a>
         </nav>
     </div>
   )

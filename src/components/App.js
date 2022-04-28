@@ -1,12 +1,13 @@
-import Signup from "./Signup";
 import { AuthProvider } from "../contexts/AuthContext";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Login from "./Login";
+import Signup from "./Signup";
 import PrivateRoute from "./PrivateRoute";
 import ForgotPassword from "./ForgotPassword.js";
 import UpdateProfile from "./UpdateProfile.js";
 import Home from "./Home";
+import './App.css'
 
 
 function App() {

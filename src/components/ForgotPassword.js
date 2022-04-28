@@ -31,7 +31,7 @@ const ForgotPassword = () => {
         <div className="d-flex align-items-center justify-content-center w-100" style={{minHeight:'100vh'}}>
             <Card style={{ maxWidth: "400px" }}>
                     <Card.Body>
-                        <h2 className="text-center mb-4">Reset mot de passe</h2>
+                        <h2 className="text-center mb-4">Reset <br/> mot de passe</h2>
                         {error && <Alert variant="danger">{error}</Alert>}
                         {message && <Alert variant="success">{message}</Alert>}
                         <Form onSubmit={handleSubmit}>

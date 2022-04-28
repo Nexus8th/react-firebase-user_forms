@@ -42,16 +42,16 @@ const ForgotPassword = () => {
                                 <Form.Control style={{borderColor:'#009688'}} className="mb-0 rounded-pill border-2" type="email" placeholder="Entrez votre e-mail" required ref={emailRef}/>
                             </Form.Group>
                             <Button disabled={loading} className="w-100 rounded-pill mt-5" type="submit" style={{backgroundColor:'#009688', borderColor:'#009688'}}>Reset</Button>
-                            {/* <div className="w-100 text-center mt-4">
-                                <Link to="/login" style={{textDecoration:'none'}}>Se connecter</Link>
-                            </div> */}
-                            <p className="mt-5" style={{color:'#97380C', fontSize:'12px',}}>Informations légales</p>
+                            <Button disabled={loading} type="submit" className="w-100 rounded-pill text-center mt-4" style={{backgroundColor:'white', borderColor:'#009688'}}>
+                                <Link to="/login" style={{textDecoration:'none', color:'#009688'}}>Se connecter</Link>
+                            </Button>
+                            <Button disabled={loading} type="submit" className="w-100 rounded-pill text-center mt-2" style={{backgroundColor:'white', borderColor:'#009688'}}>
+                                <Link to="/signup" style={{textDecoration:'none', color:'#009688'}}>S'inscrire</Link>
+                            </Button>
+                            <p className="mt-5 mb-0" style={{color:'#97380C', fontSize:'12px',}}>Informations légales</p>
                         </Form>
                     </Card.Body>
             </Card>
-        </div>
-        <div className="w-100 text-center mt-2">
-            Nouveau membre? <Link to="/signup">S'inscrire</Link>
         </div>
         </>
     );

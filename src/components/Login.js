@@ -27,6 +27,7 @@ const Login = () => {
         setLoading(false);
         
     }
+
     return (
         <>
         <div className="d-flex align-items-center justify-content-center w-100" style={{minHeight:'100vh'}}>
@@ -49,7 +50,7 @@ const Login = () => {
                                 <Link to="/forgot-password" style={{color:'#97380C', fontSize:'12px', textDecoration:'none' }}>Mot de passe oublié?</Link>
                             </div>
                             <Button disabled={loading} className="w-100 mt-5 rounded-pill" type="submit" style={{backgroundColor:'#009688', borderColor:'#009688'}}>Valider</Button>
-                            <Button disabled={loading} className="w-100 mt-4 rounded-pill" type="submit" style={{backgroundColor:'#009688', borderColor:'#009688'}}><Link to="/signup" style={{textDecoration:'none', color:'white'}} onKeyPress={(e) => {e.key === 'Enter' && e.preventDefault()}}>S'inscrire</Link></Button>
+                            <Button disabled={loading} className="w-100 mt-3 rounded-pill" type="submit" style={{backgroundColor:'white', borderColor:'#009688'}}><Link to="/signup" style={{textDecoration:'none', color:'#009688'}} onKeyPress={(e) => {e.key === 'Enter' && e.preventDefault()}}>S'inscrire</Link></Button>
                             <p className="mt-4 mb-0" style={{color:'#97380C', fontSize:'12px',}}>Informations légales</p>
                         </Form>
                     </Card.Body>

@@ -36,7 +36,7 @@ const Signup = () => {
     return (
         <>
         <div className="d-flex align-items-center justify-content-center w-100" style={{minHeight:'100vh'}}>
-            <Card style={{ maxWidth: "400px", backgroundColor:'#EBEBEB', justifyContent:'center', alignItems:'center', textAlign:'center' }}>
+            <Card style={{ maxWidth: "400px", minWidth:"300px", backgroundColor:'#EBEBEB', justifyContent:'center', alignItems:'center', textAlign:'center' }}>
                     <Card.Body>
                         <div className="mt-2 mb-0" style={{color:'#009688'}}><UserIcon style={{width:'130px', height:'150px'}}/>
                         </div>

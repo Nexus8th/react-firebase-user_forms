@@ -38,7 +38,7 @@ export default function Dashboard() {
     return (
         <>
         <div className="d-flex align-items-center justify-content-center w-100" style={{minHeight:'100vh'}}>
-            <Card style={{ maxWidth: "400px", backgroundColor:'#EBEBEB', justifyContent:'center', alignItems:'center', textAlign:'center' }}>
+            <Card style={{ maxWidth: "400px", minWidth:"300px", backgroundColor:'#EBEBEB', justifyContent:'center', alignItems:'center', textAlign:'center' }}>
                     <Card.Body>
                         <div className="mt-3" style={{color:'#009688'}}><UserIcon style={{width:'130px', height:'150px'}}/>
                         </div>
@@ -50,9 +50,9 @@ export default function Dashboard() {
                         <div style={{color:'#009688'}} className="w-100 text-center mt-2">
                             <strong>Pseudo: &nbsp;</strong>{currentUser.pseudo}
                         </div>
-                        <Button onClick={handleUpdate} className="w-100 mt-5 rounded-pill" type="submit" style={{backgroundColor:'#009688', borderColor:'#009688'}}>Modifier le profil</Button>
-                        <Button onClick={handleLogout} className="w-100 mt-3 rounded-pill" type="submit" style={{backgroundColor:'white', borderColor:'#009688', color:'#009688'}}>Se déconnecter</Button>
-                        <Button onClick={handleDelete} className="w-100 mt-5 rounded-pill" type="submit" style={{backgroundColor:'crimson', borderColor:'crimson'}}>Supprimer le profil</Button>
+                        <Button onClick={handleUpdate} className="w-75 mt-5 rounded-pill" type="submit" style={{backgroundColor:'#009688', borderColor:'#009688'}}>Modifier le profil</Button>
+                        <Button onClick={handleLogout} className="w-75 mt-3 rounded-pill" type="submit" style={{backgroundColor:'white', borderColor:'#009688', color:'#009688'}}>Se déconnecter</Button>
+                        <Button onClick={handleDelete} className="w-75 mt-5 rounded-pill" type="submit" style={{backgroundColor:'crimson', borderColor:'crimson'}}>Supprimer le profil</Button>
                     </Card.Body>
             </Card>
         </div>

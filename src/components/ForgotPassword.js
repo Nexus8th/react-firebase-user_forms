@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Form, Button, Card, Alert } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import { ReactComponent as UserIcon } from './../images/person-circle.svg'
 
 const ForgotPassword = () => {
 
@@ -29,20 +30,22 @@ const ForgotPassword = () => {
     return (
         <>
         <div className="d-flex align-items-center justify-content-center w-100" style={{minHeight:'100vh'}}>
-            <Card style={{ maxWidth: "400px" }}>
+            <Card style={{ maxWidth: "400px", backgroundColor:'#EBEBEB', justifyContent:'center', alignItems:'center', textAlign:'center' }}>
                     <Card.Body>
-                        <h2 className="text-center mb-4">Reset <br/> mot de passe</h2>
+                        <div className="mt-3" style={{color:'#009688'}}><UserIcon style={{width:'130px', height:'150px'}}/></div>
+                        <h2 className="text-center mb-3 mt-3" style={{color:'#00675B', fontWeight:'400'}}>Reset <br/> mot de passe</h2>
                         {error && <Alert variant="danger">{error}</Alert>}
                         {message && <Alert variant="success">{message}</Alert>}
                         <Form onSubmit={handleSubmit}>
                             <Form.Group id="email">
-                                <Form.Label>Email</Form.Label>
-                                <Form.Control className="mb-3" type="email" placeholder="Entrez votre email" required ref={emailRef}/>
+                                <Form.Label></Form.Label>
+                                <Form.Control style={{borderColor:'#009688'}} className="mb-0 rounded-pill border-2" type="email" placeholder="Entrez votre e-mail" required ref={emailRef}/>
                             </Form.Group>
-                            <Button disabled={loading} className="w-100" type="submit">Reset</Button>
-                            <div className="w-100 text-center mt-3">
-                                <Link to="/login">Se connecter</Link>
-                            </div>
+                            <Button disabled={loading} className="w-100 rounded-pill mt-5" type="submit" style={{backgroundColor:'#009688', borderColor:'#009688'}}>Reset</Button>
+                            {/* <div className="w-100 text-center mt-4">
+                                <Link to="/login" style={{textDecoration:'none'}}>Se connecter</Link>
+                            </div> */}
+                            <p className="mt-5" style={{color:'#97380C', fontSize:'12px',}}>Informations légales</p>
                         </Form>
                     </Card.Body>
             </Card>

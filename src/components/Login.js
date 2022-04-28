@@ -34,7 +34,7 @@ const Login = () => {
                     <Card.Body>
                         <div className="mt-3" style={{color:'#009688'}}><UserIcon style={{width:'130px', height:'150px'}}/>
                         </div>
-                        <h2 className="text-center mb-2 mt-5" style={{color:'#00675B'}}>S'identifier</h2>
+                        <h2 className="text-center mb-2 mt-4" style={{color:'#00675B', fontWeight:'400'}}>S'identifier</h2>
                         {error && <Alert variant="danger">{error}</Alert>}
                         <Form onSubmit={handleSubmit}>
                             <Form.Group id="email">
@@ -54,7 +54,7 @@ const Login = () => {
                     </Card.Body>
             </Card>
         </div>
-        <div className="w-100 text-center mt-2">
+        <div className="w-100 text-center mt-0">
             Nouveau membre? <Link to="/signup">S'inscrire</Link>
         </div>
         </>

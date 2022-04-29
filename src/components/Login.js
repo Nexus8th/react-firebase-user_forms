@@ -28,10 +28,15 @@ const Login = () => {
         
     }
 
+    function handleSignUp(e) {
+        e.preventDefault();
+        navigate('/signup');
+    }
+
     return (
         <>
         <div className="d-flex align-items-center justify-content-center w-100" style={{minHeight:'100vh'}}>
-            <Card style={{ maxWidth: "400px", backgroundColor:'#EBEBEB', justifyContent:'center', alignItems:'center', textAlign:'center' }}>
+            <Card style={{ maxWidth: "400px", minWidth:"300px", backgroundColor:'#EBEBEB', justifyContent:'center', alignItems:'center', textAlign:'center' }}>
                     <Card.Body>
                         <div className="mt-3" style={{color:'#009688'}}><UserIcon style={{width:'130px', height:'150px'}}/>
                         </div>
@@ -47,11 +52,11 @@ const Login = () => {
                                 <Form.Control style={{borderColor:'#009688'}} className="mb-3 rounded-pill border-2" type="password" placeholder="Votre mot de passe" required ref={passwordRef}/>
                             </Form.Group>
                             <div className="w-100 text-center mt-3 mb-0">
-                                <Link to="/forgot-password" style={{color:'#97380C', fontSize:'12px', textDecoration:'none' }}>Mot de passe oublié?</Link>
+                                <Link to="/forgot-password" style={{color:'#97380C', fontSize:'12px'}}>Mot de passe oublié?</Link>
                             </div>
                             <Button disabled={loading} className="w-100 mt-5 rounded-pill" type="submit" style={{backgroundColor:'#009688', borderColor:'#009688'}}>Valider</Button>
-                            <Button disabled={loading} className="w-100 mt-3 rounded-pill" type="submit" style={{backgroundColor:'white', borderColor:'#009688'}}><Link to="/signup" style={{textDecoration:'none', color:'#009688'}} onKeyPress={(e) => {e.key === 'Enter' && e.preventDefault()}}>S'inscrire</Link></Button>
-                            <p className="mt-4 mb-0" style={{color:'#97380C', fontSize:'12px',}}>Informations légales</p>
+                            <Button onClick={handleSignUp} disabled={loading} className="w-100 mt-3 rounded-pill" type="submit" style={{backgroundColor:'white', borderColor:'#009688', color:'#009688'}}>S'inscrire</Button>
+                            <p className="mt-4 mb-0" style={{color:'#97380C', fontSize:'12px'}}>Informations légales</p>
                         </Form>
                     </Card.Body>
             </Card>

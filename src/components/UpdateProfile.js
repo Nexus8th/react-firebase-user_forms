@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Form, Button, Card, Alert } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { ReactComponent as UserIcon } from './../images/person-circle.svg'
 
@@ -41,10 +41,16 @@ const UpdateProfile = () => {
         }
         );
     }
+
+    function handleCancel(e) {
+        e.preventDefault();
+        navigate('/dashboard');
+    }
+
     return (
         <>
         <div className="d-flex align-items-center justify-content-center w-100" style={{minHeight:'100vh'}}>
-            <Card style={{ maxWidth: "400px", backgroundColor:'#EBEBEB', justifyContent:'center', alignItems:'center', textAlign:'center' }}>
+            <Card style={{ maxWidth: "300px", minWidth:"300px", backgroundColor:'#EBEBEB', justifyContent:'center', alignItems:'center', textAlign:'center' }}>
                     <Card.Body>
                         <div className="mt-3" style={{color:'#009688'}}><UserIcon style={{width:'130px', height:'150px'}}/>
                         </div>
@@ -68,7 +74,7 @@ const UpdateProfile = () => {
                                 <Form.Control style={{borderColor:'#009688'}} className="rounded-pill border-2 mt-0 mb-5" type="password" placeholder="Entrez votre mot de passe" ref={confirmPasswordRef}/>
                             </Form.Group>
                             <Button disabled={loading} className="w-100 mt-0 rounded-pill" type="submit" style={{backgroundColor:'#009688', borderColor:'#009688'}}>Mettre à jour</Button>
-                            <Button disabled={loading} className="w-100 mt-3 rounded-pill" type="submit" style={{backgroundColor:'#009688', borderColor:'#009688'}}><Link to="/dashboard" style={{textDecoration:'none', color:'white'}} >Annuler</Link></Button>
+                            <Button onClick={handleCancel} disabled={loading} className="w-100 mt-3 rounded-pill" type="submit" style={{backgroundColor:'#009688', borderColor:'#009688'}}>Annuler</Button>
                         </Form>
                     </Card.Body>
             </Card>

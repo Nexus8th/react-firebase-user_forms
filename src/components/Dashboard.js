@@ -1,7 +1,7 @@
 import { Button, Card, Alert } from 'react-bootstrap';
 import { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ReactComponent as UserIcon } from './../images/person-circle.svg'
 
 export default function Dashboard() {
@@ -33,7 +33,7 @@ export default function Dashboard() {
     return (
         <>
         <div className="d-flex align-items-center justify-content-center w-100" style={{minHeight:'100vh'}}>
-            <Card style={{ maxWidth: "400px", backgroundColor:'#EBEBEB', justifyContent:'center', alignItems:'center', textAlign:'center' }}>
+            <Card style={{ maxWidth: "300px", backgroundColor:'#EBEBEB', justifyContent:'center', alignItems:'center', textAlign:'center' }}>
                     <Card.Body>
                         <div className="mt-3" style={{color:'#009688'}}><UserIcon style={{width:'130px', height:'150px'}}/>
                         </div>
@@ -45,9 +45,9 @@ export default function Dashboard() {
                         <div style={{color:'#009688'}} className="w-100 text-center mt-2">
                             <strong>Pseudo: &nbsp;</strong>{currentUser.pseudo}
                         </div>
-                        <Button  className="w-100 mt-5 rounded-pill" type="submit" style={{backgroundColor:'#009688', borderColor:'#009688'}}><Link to="/update-profile" style={{textDecoration:'none', color:'white'}}>Modifier le profil</Link></Button>
-                        <Button onClick={handleLogout} className="w-100 mt-3 rounded-pill" type="submit" style={{backgroundColor:'white', borderColor:'#009688'}}><Link to="/login" style={{textDecoration:'none', color:'#009688'}}>Se déconnecter</Link></Button>
-                        <Button onClick={handleDelete} className="w-100 mt-5 rounded-pill" type="submit" style={{backgroundColor:'crimson', borderColor:'crimson'}}><Link to="/update-profile" style={{textDecoration:'none', color:'white'}}>Supprimer le profil</Link></Button>
+                        <Button onClick={() => navigate('/update-profile')} className="w-100 mt-5 rounded-pill" type="submit" style={{backgroundColor:'#009688', borderColor:'#009688'}}>Modifier le profil</Button>
+                        <Button onClick={handleLogout} className="w-100 mt-3 rounded-pill" type="submit" style={{backgroundColor:'white', borderColor:'#009688', color:'#009688'}}>Se déconnecter</Button>
+                        <Button onClick={handleDelete} className="w-100 mb-3 mt-5 rounded-pill" type="submit" style={{backgroundColor:'crimson', borderColor:'crimson'}}>Supprimer le profil</Button>
                     </Card.Body>
             </Card>
         </div>

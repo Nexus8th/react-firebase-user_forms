@@ -2,7 +2,7 @@ import { Button, Card, Alert } from 'react-bootstrap';
 import { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import { ReactComponent as UserIcon } from './../images/person-circle.svg'
+import { ReactComponent as UserIcon } from './../images/person-circle.svg';
 
 export default function Dashboard() {
 
@@ -48,7 +48,7 @@ export default function Dashboard() {
                             <strong>Email: &nbsp;</strong>{currentUser.email}
                         </div>
                         <div style={{color:'#009688'}} className="w-100 text-center mt-2">
-                            <strong>Pseudo: &nbsp;</strong>{currentUser.pseudo}
+                            <strong>Pseudo: &nbsp;</strong>{currentUser.displayName}
                         </div>
                         <Button onClick={handleUpdate} className="w-75 mt-5 rounded-pill" type="submit" style={{backgroundColor:'#009688', borderColor:'#009688'}}>Modifier le profil</Button>
                         <Button onClick={handleLogout} className="w-75 mt-3 rounded-pill" type="submit" style={{backgroundColor:'white', borderColor:'#009688', color:'#009688'}}>Se déconnecter</Button>

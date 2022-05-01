@@ -35,7 +35,7 @@ const Login = () => {
 
     return (
         <>
-        <div className="d-flex align-items-center justify-content-center w-100" style={{minHeight:'100vh'}}>
+        <div className="d-flex align-items-center justify-content-center" style={{minHeight:'auto', width:'auto', height:'auto', minWidth:'auto', maxWidth:'auto', maxHeight:'auto'}}>
             <Card style={{ maxWidth: "400px", minWidth:"300px", backgroundColor:'#EBEBEB', justifyContent:'center', alignItems:'center', textAlign:'center' }}>
                     <Card.Body>
                         <div className="mt-3" style={{color:'#009688'}}><UserIcon style={{width:'130px', height:'150px'}}/>

@@ -1,13 +1,14 @@
+import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from './../images/Logo-blanc-H.svg';
 import { ReactComponent as UserIcon } from './../images/person-circle.svg'
 
 function Header() {
 
     return (
-        <div className="w-100 m-0 p-0" style={{ maxWidth:'100%', minHeight:'auto'}}>
+        <div className="w-100 m-0 p-0" style={{ maxWidth:'100%', minHeight:'auto', minWidth:'100%'}}>
             <nav className="navbar navbar-expand-xl sticky-top navbar-dark " style={{ minWidth: '100%', backgroundColor:'#00675B', minHeight:'100px', maxWidth:'100%'}}>
                 <a className="navbar-brand" href="# ">
-                    <Logo style={{maxWidth:'270px', maxHeight:'80px', marginLeft:'90px'}}/>
+                    <Logo style={{maxWidth:'270px', maxHeight:'80px', marginLeft:'90px', minWidth:'270px'}}/>
                 </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -34,9 +35,9 @@ function Header() {
                                     <a className="nav-link disabled" href=" #" tabIndex="-1" aria-disabled="true">x</a>
                                 </li>
                             </ul>
-                            <a className="navbar-icon" href=" #">
-                                <UserIcon style={{color:'white', width:'20px'}}/>
-                            </a>
+                            <p className="navbar-icon mt-3" href=" #">
+                                <Link to="/login" className="text-white"><UserIcon style={{color:'white', width:'20px'}}/></Link>
+                            </p>
                         </div>
                     </div>
             </nav>

@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from './../images/Logo-blanc-H.svg';
-import { ReactComponent as UserIcon } from './../images/person-circle.svg'
+import ModalAuth from './ModalAuth';
 
 function Header() {
 
@@ -35,9 +34,7 @@ function Header() {
                                     <a className="nav-link disabled" href=" #" tabIndex="-1" aria-disabled="true">x</a>
                                 </li>
                             </ul>
-                            <p className="navbar-icon mt-3" href=" #">
-                                <Link to="/login" className="text-white"><UserIcon style={{color:'white', width:'20px'}}/></Link>
-                            </p>
+                            <ModalAuth/>
                         </div>
                     </div>
             </nav>
